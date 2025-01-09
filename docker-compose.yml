@@ -9,7 +9,7 @@ services:
 
 #    container_name: mysql_fight
     volumes:
-    - ./DB_FIGHT/databases:/var/lib/mysql
+    - ./db_fight/databases:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: fight_db
@@ -20,7 +20,7 @@ services:
 #    network_mode: host
 
   app_node:
-    build: ./APP_FIGHT
+    build: ./app_fight
 #    container_name: app-node_fight
     depends_on:
       - database
