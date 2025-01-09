@@ -25,6 +25,6 @@ jobs:
           ssh-keyscan -H ${{ vars.SSH_HOST }} > ~/.ssh/known_hosts
         
       - name: copy docker compose config
-        run: scp ./* ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }}:nodeapp
+        run: scp -r ./* ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }}:nodeapp
 
 
